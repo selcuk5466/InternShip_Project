@@ -34,6 +34,10 @@ public class DialogContent extends ParentPage {
     @FindBy(tagName = "mat-panel-description")
     public WebElement messageBox;
 
+    @FindBy(xpath = "//div[@class=\"ng-star-inserted\"]/img")
+    public WebElement logo;
+
+
 
     public void verifyMessageContainsText(String value){
         wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//hot-toast-container/div/div/div//*"),0));
@@ -46,12 +50,12 @@ public class DialogContent extends ParentPage {
 
         switch (strElementName.trim())
         {
-            case "addButton" : return this.username;
-            case "nameInput" : return this.password;
-            case "codeInput" : return this.loginButton;
-            case "saveButton" : return this.headText;
-            case "shortName" : return this.messageBox;
-
+            case "username" : return this.username;
+            case "password" : return this.password;
+            case "loginButton" : return this.loginButton;
+            case "headText" : return this.headText;
+            case "messageBox" : return this.messageBox;
+            case "logo" : return this.logo;
         }
 
         return null;
