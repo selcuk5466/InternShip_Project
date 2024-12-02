@@ -8,6 +8,7 @@ public class _04_HamburgerMenuMessaging {
     @When("^Click on the Hamburger Menu$")
     public void clickOnTheHamburgerMenu() {
 
+
     }
 
     @And("^Click on the Messages$")
