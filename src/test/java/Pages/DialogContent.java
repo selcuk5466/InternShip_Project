@@ -37,37 +37,6 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//div[@class=\"ng-star-inserted\"]/img")
     public WebElement logo;
 
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[1]")
-    public WebElement courses;
-
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[3]")
-    public WebElement calendar;
-
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[5]")
-    public WebElement attendance;
-
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[7]")
-    public WebElement assignments;
-
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[9]")
-    public WebElement grading;
-
-    @FindBy(xpath = "//*[@data-icon='bars']")
-    public WebElement hamburgerMenu;
-
-    @FindBy(xpath = "(//SPAN[@class='mat-focus-indicator'])[7]")
-    public WebElement chatMsg;
-
-    @FindBy(xpath = "(//SPAN[@class='mat-focus-indicator'])[8]")
-    public WebElement msg;
-
-    @FindBy(xpath = "(//IMG[@_ngcontent-ng-c320871950=''])[1]")
-    public WebElement profile;
-
-
-
-
-
 
 
     public void verifyMessageContainsText(String value){
@@ -87,15 +56,6 @@ public class DialogContent extends ParentPage {
             case "headText" : return this.headText;
             case "messageBox" : return this.messageBox;
             case "logo" : return this.logo;
-            case "courses" : return this.courses;
-            case "calendar" : return this.calendar;
-            case "attendance" : return this.attendance;
-            case "assignments" : return this.assignments;
-            case "grading" : return this.grading;
-            case "hamburgerMenu" : return this.hamburgerMenu;
-            case "chatMsg" : return this.chatMsg;
-            case "msg" : return this.msg;
-            case "profile" : return this.profile;
         }
 
         return null;
