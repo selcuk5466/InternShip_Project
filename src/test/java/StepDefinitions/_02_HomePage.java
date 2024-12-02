@@ -23,8 +23,8 @@ public class _02_HomePage {
     public void mustVerifyThatTheHomePageOpens() {
 
 
-        Set<String> idler = GWD.getDriver().getWindowHandles();
-        Iterator gosterge = idler.iterator();
+        Set<String> idler1 = GWD.getDriver().getWindowHandles();
+        Iterator gosterge = idler1.iterator();
         String birinciPencereId = gosterge.next().toString();
         String ikinciPencereId = gosterge.next().toString();
 
