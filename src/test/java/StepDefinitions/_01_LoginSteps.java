@@ -17,7 +17,7 @@ public class _01_LoginSteps {
         GWD.getDriver().get("https://test.mersys.io/");
     }
 
-    @When("Enter username and password and click login button")
+    @When("Enter username and password and click login button") //yorummm
     public void enter_username_and_password_and_click_login_button() {
          dc.mySendKeys(dc.username, "Student_10");
         dc.mySendKeys(dc.password,"S12345");
