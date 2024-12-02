@@ -37,33 +37,47 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//div[@class=\"ng-star-inserted\"]/img")
     public WebElement logo;
 
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[1]")
-    public WebElement courses;
+    @FindBy(xpath = "(//span[@class='mdc-button__label'])[6]")
+    public WebElement hamMenu;
 
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[3]")
-    public WebElement calendar;
+    @FindBy(xpath = "(//button[@aria-haspopup='menu'])[15]")
+    public WebElement hamMessaging;
 
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[5]")
-    public WebElement attendance;
+    @FindBy(linkText = "Send Message")
+    public WebElement hamSendMessage;
 
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[7]")
-    public WebElement assignments;
+    @FindBy(linkText = "Inbox")
+    public WebElement hamInbox;
 
-    @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[9]")
-    public WebElement grading;
+    @FindBy(linkText = "Outbox")
+    public WebElement hamOutbox;
 
-    @FindBy(xpath = "//*[@data-icon='bars']")
-    public WebElement hamburgerMenu;
+    @FindBy(linkText = "Trash")
+    public WebElement hamTrash;
 
-    @FindBy(xpath = "(//SPAN[@class='mat-focus-indicator'])[7]")
-    public WebElement chatMsg;
+    @FindBy(xpath = "(//div[@class='ng-star-inserted'])[6]")
+    public WebElement openedPageName;
 
-    @FindBy(xpath = "(//SPAN[@class='mat-focus-indicator'])[8]")
-    public WebElement msg;
+    @FindBy(xpath = "(//span[@class='mat-focus-indicator'])[17]")
+    public WebElement addReceiver;
 
-    @FindBy(xpath = "(//IMG[@_ngcontent-ng-c320871950=''])[1]")
-    public WebElement profile;
+    @FindBy(id = "mat-mdc-form-field-label-22")
+    public WebElement nameOrEmail;
 
+    @FindBy(xpath = "//tbody[@role='rowgroup']/tr")
+    public WebElement selectReceiver;
+
+    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[13]")
+    public WebElement addClose;
+
+    @FindBy(xpath = "(//ms-text-field[@formcontrolname='title'])")
+    public WebElement subject;
+
+    @FindBy(xpath = "(//div[@class='tox-edit-area'])")
+    public WebElement textInMessage;
+
+    @FindBy(xpath = "sendButton")
+    public WebElement sendButton;
 
 
 
@@ -87,15 +101,23 @@ public class DialogContent extends ParentPage {
             case "headText" : return this.headText;
             case "messageBox" : return this.messageBox;
             case "logo" : return this.logo;
-            case "courses" : return this.courses;
-            case "calendar" : return this.calendar;
-            case "attendance" : return this.attendance;
-            case "assignments" : return this.assignments;
-            case "grading" : return this.grading;
-            case "hamburgerMenu" : return this.hamburgerMenu;
-            case "chatMsg" : return this.chatMsg;
-            case "msg" : return this.msg;
-            case "profile" : return this.profile;
+            case "hamMenu":return this.hamMenu;
+            case "hamMessaging":return  this.hamMessaging;
+            case "hamSendMessage":return this.hamSendMessage;
+            case "hamInbox":return this.hamInbox;
+            case "hamOutbox":return this.hamOutbox;
+            case "hamTrash": return this.hamTrash;
+            case "openedPageName":return this.openedPageName;
+            case "addReceiver":return this.addReceiver;
+            case "nameOrEmail":return this.nameOrEmail;
+            case "selectReceiver":return this.selectReceiver;
+            case "addClose":return this.addClose;
+            case "subject":return this.subject;
+            case "textInMessage":return this.textInMessage;
+            case "sendButton":return this.sendButton;
+
+
+
         }
 
         return null;
