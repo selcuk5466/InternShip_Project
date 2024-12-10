@@ -3,11 +3,16 @@ package StepDefinitions;
 import Pages.DialogContent;
 import Pages.ParentPage;
 import Utilities.GWD;
+import Utilities.Tools;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import javax.tools.Tool;
 
 public class _03_Home_2
 {
@@ -29,8 +34,18 @@ public class _03_Home_2
 
         js.executeScript("arguments[0].click();", takeTest);
 
-       // pp.myClick(dc.getWebElement("chatMsg"));
+        pp.myClick(dc.getWebElement("chatMsg"));
+
+
+        pp.myClick(dc.getWebElement("chatMsgClos"));
+
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+
         pp.myClick(dc.getWebElement("msg"));
+
+        pp.myClick(dc.getWebElement("msgClos"));
+        new Actions(GWD.getDriver()).sendKeys(Keys.ESCAPE).build().perform();
+
         pp.myClick(dc.getWebElement("profile"));
 
 
