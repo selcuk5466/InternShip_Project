@@ -8,18 +8,23 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
 import java.util.List;
 
 public class _05_SendNewMessage {
     ParentPage parentPage=new ParentPage();
     DialogContent dialogContent=new DialogContent();
     Actions actions=new Actions(GWD.getDriver());
+    WebDriverWait wait=new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(20));
 
 
     @And("Enter form information")
     public void enterFormInformation() {
+        wait.until(ExpectedConditions.elementToBeClickable(dialogContent.getWebElement("textInMessage")));
         parentPage.myClick(dialogContent.getWebElement("addReceiver"));
         parentPage.mySendKeys(dialogContent.getWebElement("nameOrEmail"),"stu");
         parentPage.myClick(dialogContent.getWebElement("selectReceiver"));
