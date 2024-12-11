@@ -20,78 +20,6 @@ public class DialogContent extends ParentPage {
         PageFactory.initElements(GWD.getDriver(), this);
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @FindBy(css="[formcontrolname='username']")
     public WebElement username;
 
@@ -109,6 +37,48 @@ public class DialogContent extends ParentPage {
 
     @FindBy(xpath = "//div[@class=\"ng-star-inserted\"]/img")
     public WebElement logo;
+
+    @FindBy(xpath = "(//span[@class='mdc-button__label'])[6]")
+    public WebElement hamMenu;
+
+    @FindBy(xpath = "(//button[@aria-haspopup='menu'])[15]")
+    public WebElement hamMessaging;
+
+    @FindBy(linkText = "Send Message")
+    public WebElement hamSendMessage;
+
+    @FindBy(linkText = "Inbox")
+    public WebElement hamInbox;
+
+    @FindBy(linkText = "Outbox")
+    public WebElement hamOutbox;
+
+    @FindBy(linkText = "Trash")
+    public WebElement hamTrash;
+
+    @FindBy(xpath = "(//div[@class='ng-star-inserted'])[6]")
+    public WebElement openedPageName;
+
+    @FindBy(xpath = "(//span[@class='mat-focus-indicator'])[17]")
+    public WebElement addReceiver;
+
+    @FindBy(id = "mat-mdc-form-field-label-22")
+    public WebElement nameOrEmail;
+
+    @FindBy(xpath = "//tbody[@role='rowgroup']/tr")
+    public WebElement selectReceiver;
+
+    @FindBy(xpath = "(//span[@class='ng-star-inserted'])[13]")
+    public WebElement addClose;
+
+    @FindBy(xpath = "(//ms-text-field[@formcontrolname='title'])")
+    public WebElement subject;
+
+    @FindBy(xpath = "(//div[@class='tox-edit-area'])")
+    public WebElement textInMessage;
+
+    @FindBy(xpath = "sendButton")
+    public WebElement sendButton;
 
     @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[1]")
     public WebElement courses;
@@ -247,6 +217,20 @@ public class DialogContent extends ParentPage {
             case "headText" : return this.headText;
             case "messageBox" : return this.messageBox;
             case "logo" : return this.logo;
+            case "hamMenu":return this.hamMenu;
+            case "hamMessaging":return  this.hamMessaging;
+            case "hamSendMessage":return this.hamSendMessage;
+            case "hamInbox":return this.hamInbox;
+            case "hamOutbox":return this.hamOutbox;
+            case "hamTrash": return this.hamTrash;
+            case "openedPageName":return this.openedPageName;
+            case "addReceiver":return this.addReceiver;
+            case "nameOrEmail":return this.nameOrEmail;
+            case "selectReceiver":return this.selectReceiver;
+            case "addClose":return this.addClose;
+            case "subject":return this.subject;
+            case "textInMessage":return this.textInMessage;
+            case "sendButton":return this.sendButton;
             case "courses" : return this.courses;
             case "calendar" : return this.calendar;
             case "attendance" : return this.attendance;
