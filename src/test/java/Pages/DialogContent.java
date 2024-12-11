@@ -38,22 +38,16 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "//div[@class=\"ng-star-inserted\"]/img")
     public WebElement logo;
 
-    @FindBy(xpath = "(//span[@class='mdc-button__label'])[6]")
-    public WebElement hamMenu;
-
-    @FindBy(xpath = "(//button[@aria-haspopup='menu'])[15]")
-    public WebElement hamMessaging;
-
-    @FindBy(linkText = "Send Message")
+    @FindBy(xpath = "(//fa-icon[@class='ng-fa-icon ng-star-inserted'])[11]")
     public WebElement hamSendMessage;
 
-    @FindBy(linkText = "Inbox")
+    @FindBy(xpath = "(//button[@class='mat-mdc-menu-item mat-focus-indicator ng-tns-c3371495337-7 ng-star-inserted'])[2]")
     public WebElement hamInbox;
 
-    @FindBy(linkText = "Outbox")
+    @FindBy(xpath = "(//button[@class='mat-mdc-menu-item mat-focus-indicator ng-tns-c3371495337-7 ng-star-inserted'])[3]")
     public WebElement hamOutbox;
 
-    @FindBy(linkText = "Trash")
+    @FindBy(xpath = "(//button[@class='mat-mdc-menu-item mat-focus-indicator ng-tns-c3371495337-7 ng-star-inserted'])[4]")
     public WebElement hamTrash;
 
     @FindBy(xpath = "(//div[@class='ng-star-inserted'])[6]")
@@ -77,7 +71,7 @@ public class DialogContent extends ParentPage {
     @FindBy(xpath = "(//div[@class='tox-edit-area'])")
     public WebElement textInMessage;
 
-    @FindBy(xpath = "sendButton")
+    @FindBy(xpath = "(//button[@mat-ripple-loader-class-name='mat-mdc-button-ripple'])[19]")
     public WebElement sendButton;
 
     @FindBy(xpath = "(//SPAN[@_ngcontent-ng-c1010417632=''])[1]")
@@ -217,8 +211,6 @@ public class DialogContent extends ParentPage {
             case "headText" : return this.headText;
             case "messageBox" : return this.messageBox;
             case "logo" : return this.logo;
-            case "hamMenu":return this.hamMenu;
-            case "hamMessaging":return  this.hamMessaging;
             case "hamSendMessage":return this.hamSendMessage;
             case "hamInbox":return this.hamInbox;
             case "hamOutbox":return this.hamOutbox;
